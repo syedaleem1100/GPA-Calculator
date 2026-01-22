@@ -1,4 +1,4 @@
-/* Reset some defaults */
+/* Reset defaults */
 * {
     margin: 0;
     padding: 0;
@@ -6,59 +6,70 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Body style */
+/* Body */
 body {
     background: #f5f7fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    padding: 10px;
 }
 
 /* Header */
 header {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 
 header h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #2c3e50;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #7f8c8d;
+}
+
+/* Ads */
+#header-ads, #ads-placeholder {
+    width: 100%;
+    max-width: 700px;
+    margin: 10px auto;
+    display: block;
 }
 
 /* Calculator Card */
 .calculator-card {
     background: #ffffff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    width: 90%;
+    width: 100%;
     max-width: 700px;
     margin-bottom: 50px;
 }
 
-/* Table styling */
-.calculator-card table {
+/* Table */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    overflow-x: auto; /* scrollable on mobile */
-    display: block;
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 12px 10px;
     text-align: center;
 }
 
 th {
     background: #3498db;
-    color: white;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -72,7 +83,7 @@ td {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* wrap buttons on small screens */
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -84,6 +95,8 @@ button {
     font-weight: bold;
     color: white;
     transition: 0.3s;
+    flex: 1;
+    min-width: 120px;
 }
 
 #add-course-btn {
@@ -118,42 +131,39 @@ button {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     font-size: 0.9rem;
     color: #7f8c8d;
     width: 100%;
     background: #ecf0f1;
 }
 
-/* Ads */
-#header-ads, #ads-placeholder {
-    width: 100%;
-    max-width: 700px;
-    margin: 10px auto;
-    display: block;
-}
-
 /* Responsive */
 @media (max-width: 600px) {
     th, td {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding: 8px;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
     }
 
     button {
-        padding: 8px 15px;
         font-size: 0.9rem;
-    }
-
-    .calculator-card {
-        padding: 20px;
+        padding: 8px;
     }
 
     #result {
         font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .calculator-card {
+        padding: 15px;
     }
 }
